@@ -5,7 +5,7 @@ A Model Context Protocol (MCP) server providing access to BabelNet's multilingua
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# 🚀 Quick Start Guide
+## 🚀 Quick Start Guide
 
 Get up and running with BabelNet MCP in 5 minutes!
 
