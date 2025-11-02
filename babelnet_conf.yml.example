@@ -1,0 +1,11 @@
+# BabelNet Configuration Example
+# Copy this file to babelnet_conf.yml and add your API key
+
+# Get your API key at: https://babelnet.org/register
+RESTFUL_KEY: 'your-api-key-here'
+
+# Optional: Specify a different REST endpoint
+# RESTFUL_URL: 'https://babelnet.io/v9/service'
+
+# Optional: For RPC mode (requires local BabelNet indices)
+# RPC_URL: "tcp://127.0.0.1:7790"
