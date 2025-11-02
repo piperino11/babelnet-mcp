@@ -3,7 +3,6 @@
 A Model Context Protocol (MCP) server providing access to BabelNet's multilingual semantic network. Query concepts, retrieve synsets, explore semantic relations, and get multilingual translations through BabelNet's comprehensive knowledge base.
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 🚀 Quick Start Guide
 
