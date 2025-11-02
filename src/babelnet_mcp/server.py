@@ -12,7 +12,9 @@ except ImportError:
 from .config import config
 from .http_client import BabelNetHTTPClient
 from .tools import (
-    register_definition_tool
+    register_definition_tool,
+    register_synset_tools,
+    register_sense_tools
 )
 from .constants import LANGUAGE_MAP, POS_MAP
 
@@ -42,7 +44,8 @@ def register_all_tools(client: BabelNetHTTPClient) -> None:
     """Register all MCP tools."""
     logger.info("Registering BabelNet MCP tools...")
     register_definition_tool(mcp, client)
-
+    register_synset_tools(mcp, client)
+    register_sense_tools(mcp, client)
     logger.info("All tools registered successfully")
 
 

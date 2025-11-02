@@ -51,6 +51,29 @@ class BabelNetHTTPClient:
         # API returns a single synset JSON object
         return self._get("getSynset", {"id": synset_id})
 
+
+    def get_senses(
+        self,
+        lemma: str,
+        search_langs: List[str],
+        target_langs: Optional[List[str]] = None,
+        poses: Optional[List[str]] = None,
+    ) -> List[Dict[str, Any]]:
+        params: Dict[str, Any] = {"lemma": lemma}
+        for lang in search_langs:
+            params.setdefault("searchLang", [])
+            params["searchLang"].append(lang.upper())
+        if target_langs:
+            for lang in target_langs:
+                params.setdefault("targetLang", [])
+                params["targetLang"].append(lang.upper())
+        if poses:
+            for pos in poses:
+                params.setdefault("pos", [])
+                params["pos"].append(pos.upper())
+        return self._get("getSenses", params)
+
+
     def get_outgoing_edges(self, synset_id: str, pointer: Optional[str] = None) -> List[Dict[str, Any]]:
         params: Dict[str, Any] = {"id": synset_id}
         if pointer:
