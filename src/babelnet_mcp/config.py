@@ -27,8 +27,6 @@ class BabelNetConfig:
     def _load_config(self) -> None:
         """Load configuration from babelnet_conf.yml file."""
         config_path = self._find_config_file()
-        logger.error("config_path")
-        logger.error(config_path)
 
         if not config_path:
             logger.warning(
@@ -62,14 +60,12 @@ class BabelNetConfig:
         """
         # Check environment variable
         env_path = os.environ.get('BABELNET_CONF')
-        logger.info("env_path")
-        logger.info(env_path)
 
         if env_path and Path(env_path).exists():
             return Path(env_path)
     
         # Check module directory (where config.py resides)
-        module_dir = Path(__file__).parent / 'babelnet_conf.yml'
+        module_dir = Path(__file__).parent.parent.parent / 'babelnet_conf.yml'
 
         if module_dir.exists():
             return module_dir
