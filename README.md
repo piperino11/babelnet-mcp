@@ -117,3 +117,5 @@ The server is provided "as is" without warranty of any kind. The authors are not
 - Data accuracy
 - Service availability
 - Any damages from using this software
+
+[![MCP Badge](https://lobehub.com/badge/mcp/piperino11-babelnet-mcp)](https://lobehub.com/mcp/piperino11-babelnet-mcp)
